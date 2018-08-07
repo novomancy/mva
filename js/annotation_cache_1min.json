@@ -1,0 +1,650 @@
+[
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 689,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "有一天，有一個小和尚在路上走著。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=17.137,21.534"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 690,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "兩隻小鳥在他身邊飛來飛去。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=25.155,29.38"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 691,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚抬頭看著小鳥，",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=30.35,33.45"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 692,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "沒注意，被一隻烏龜給絆倒了。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=34.45,38.67"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 693,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "有一天，有一个小和尚在路上走着。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=17.137,21.534"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 694,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "两只小鸟在他身边飞来飞去。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=25.155,29.38"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 695,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚抬头看着小鸟，",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=30.35,33.45"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 696,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "没注意，被一只乌龟给绊倒了。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=34.45,38.67"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 698,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "乌龟也被绊了个四脚朝天。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=38.675,42.124"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 699,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "烏龜也被絆了個四腳朝天。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=38.675,42.124"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 700,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚坐了起來然後把烏龜也翻了過來。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=42.35,46.575"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 701,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚坐了起来然后把乌龟也翻了过来。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=42.35,46.575"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 702,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚站了起来继续往前走。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=47.4,50.763"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 703,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "小和尚站了起來繼續往前走。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=47.4,50.763"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 704,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "不久就走到了一座大山的山腳下。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=50.8,54.594"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 705,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "不久就走到了一座大山的山脚下。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=50.8,54.594"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 706,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "山路弯弯曲曲，山顶上有个小庙。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "simplified"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=54.79,59.083"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "http://www.w3.org/ns/anno.jsonld",
+      "id": 707,
+      "type": "Annotation",
+      "motivation": "highlighting",
+      "creator": {
+        "type": "Person",
+        "nickname": "a92c12a703e002b7dc3cdc3234017e2983c3549d",
+        "email": "a92c12a703e002b7dc3cdc3234017e2983c3549d"
+      },
+      "body": [
+        {
+          "type": "TextualBody",
+          "value": "山路彎彎曲曲，山頂上有個小廟。",
+          "format": "text/plain",
+          "language": "en",
+          "purpose": "describing"
+        },
+        {
+          "type": "TextualBody",
+          "purpose": "tagging",
+          "value": "traditional"
+        }
+      ],
+      "target": {
+        "id": "https://rcweb.dartmouth.edu/homes/BellJ/three_monks_cropped.mp4",
+        "type": "Video",
+        "selector": [
+          {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "t=54.79,59.083"
+          }
+        ]
+      }
+    }
+  ]
