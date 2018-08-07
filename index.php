@@ -66,6 +66,10 @@
     </section>      
     <?php } ?>
     <section>
+    Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>)<br>
+    <a href="https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php">Log Out</a>
+    </section>
+    <section>
       <div id="page-video">
         <video id="monks-video" width="640" height="480" controls>
         <source src="https://rcweb.dartmouth.edu/MEP/shanghai_video/ChangXiangSi01.mp4" type="video/mp4">
@@ -165,9 +169,9 @@
 
             $('body').ready(function(){
                 // This is for entering annotations
-                var serverAddress = "http://ec2-54-202-39-81.us-west-2.compute.amazonaws.com:3000";
+                var serverAddress = "http://ec2-18-221-127-156.us-east-2.compute.amazonaws.com:3000";
                 var tagsAddress = "https://onomy.org/published/83/json";
-                var apiKey = "592c83c4-bc5c-4f07-8156-d98e4d48f707";
+                var apiKey = "facc287b-2f51-431d-87ec-773e12302fcf";
                 waldorf = $("video").first().annotate({serverURL: serverAddress, 
                                             tagsURL: tagsAddress, 
                                             apiKey: apiKey, 
