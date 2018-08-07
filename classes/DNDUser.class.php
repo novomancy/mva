@@ -21,9 +21,7 @@ class DNDUser{
 
     //$cn should be a unique username that is returned from CAS
     public function __construct($cn){
-		$name_only = preg_split("/@/", $cn);
-		$name_only = $name_only[0];
-        $this->set_name($name_only);
+        $this->set_name($cn);
     }
 
     //Set the name (and thus reset the ldap filter string)
