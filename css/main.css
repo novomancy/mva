@@ -71,52 +71,41 @@ body {
     /* height: 100vh; */
 }
 
-#book-container{
-    display: flex;
-    flex-wrap: nowrap;
-    border: 3px solid black;
-    background-color: #f9d8ac;
-    background-image: url("../img/natural-paper.png");
-    height: 90vh;
+#page-video{
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+.waldorf-info{
+    text-align: left;
 }
 
-#book-container > div{
-    height: 90vh;
-    flex: 1 1 200px;
+#index-container{
+    width: 35%;
+    float: right;
+    max-height: 80vh;
+    padding: 1em;
+    border: 2px solid black;
+    overflow: scroll;
 }
 
-#book-container > #page-divider{
-    flex: 0 0 70px;
-    background: url('../img/page_gutter.svg') repeat-y center top;
-    padding: 0;
+#index-container h4{
+    text-align: center;
+    margin: .2em;
+}
+.waldorf-index ul{
+    padding-left: 0;
+}
+.waldorf-index li{
+    list-style: none;
+    border-bottom: 1px solid black;
+    padding: .5em 0;
+}
+.waldorf-index a{
+    font-weight: bold;
+}
+.waldorf-index p{
     margin: 0;
-}
-
-#book-container > #page-video{
-    padding: 2vw;
-}
-
-#book-container > #page-text{
-    padding: 2vw;
-}
-
-#page-divider > div{
-    display: flex;
-    height: 9vh;
-}
-
-#page-divider > div > img{
-    width: 70px;
-}
-
-#monks-video{
-    display: block;
-    width: 100%;
-    border: 1px solid black;
-}
-
-.activeAnnotation{
-    color: #FF0000;
 }
 
 #header{
@@ -132,7 +121,8 @@ body {
     display: block;
 }
 
-h1{
+#title{
+    float: left;
     height: 5vh;
     text-align: left;
     font-size: 4vh;
@@ -142,20 +132,17 @@ h1{
     letter-spacing: .15em;
 }
 
-
-
-
-
+#login-box{
+    margin-top: 1em;
+    float: right;
+}
 
 .waldorf-container{
-    border: 2px solid black !important;
+    /* border: 2px solid black !important; */
 }
 
 .waldorf-info{
     background: none !important;
-    min-height: 90% !important;
-    max-height: 90% !important;
-    height: 9vh;
 }
 
 .waldorf-body p{
