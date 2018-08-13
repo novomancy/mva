@@ -1,2 +1,3 @@
 AuthType CAS 
+CASAuthNHeader true
 require valid-user 
