@@ -42,6 +42,7 @@
         }
     }
     closedir($video_dir);
+    sort($videos);
   }
 ?>
 <!doctype html>
