@@ -1,7 +1,4 @@
 <?php
-  // ini_set('display_errors', 1);
-  // error_reporting(E_ALL ^ E_NOTICE);
-
   /**
    * This page is protected by Dartmouth's CAS auth system (uses Apache mod_auth_cas)
    * This section grabs user info from CAS and LDAP to automatically register the
@@ -25,6 +22,26 @@
   //Add constructed attributes and humanize LDAP names
   if($error == ''){
     $user->humanize();
+  }
+
+  /**
+   * This page will load a list of videos from the directory below for the 
+   * user to annotate.
+   */
+
+  $video_base_dir = '/var/www/vhosts/mediaecology/collections/shanghai';
+  $video_base_url = '//mediaecology.dartmouth.edu/collections/shanghai/';
+
+  $videos = Array();
+
+  if ($video_dir = opendir($video_base_dir)) {
+    while (false !== ($fn = readdir($video_dir))) {
+        if (substr($fn, -4, 4)=='.mp4') {
+            $file = explode('/', $fn);
+            array_push($videos, array_pop($file));
+        }
+    }
+    closedir($video_dir);
   }
 ?>
 <!doctype html>
@@ -64,8 +81,12 @@
     <div class="container">
       <header>
         <div id="title">Minimum Viable Annotator</div>
-        <div id="login-box">
-          Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php">Log Out</a>
+        <div id="login-box" style="text-align: right">
+          Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php">Log Out</a><br>
+          Current video: <select id="current-video">
+          <option value="">Select Video</option>
+          <?php foreach($videos as $video){ echo "<option value='$video'".($_GET['video']==$video ? ' selected' : '').">$video</option>\n"; } ?>
+          </select>
         </div>
       </header>
       <br clear="both">
@@ -77,11 +98,11 @@
         </p>
       </section>      
       <?php } ?>
-
+      <?php if( isset($_GET['video']) && $_GET['video'] != ''){ ?>
       <section>
         <div id="page-video">
           <video id="monks-video" width="640" height="480" controls>
-          <source src="https://rcweb.dartmouth.edu/MEP/shanghai_video/ChangXiangSi01.mp4" type="video/mp4">
+          <source src="<?php echo $video_base_url . $_GET['video']?>" type="video/mp4">
           Your browser does not support the video tag.
           </video>
           <br />
@@ -94,6 +115,9 @@
           <div class="waldorf-index"></div>
         </div>
       </section>
+    <?php } else { ?>
+    Please select a video file to annotate.
+    <?php } ?>      
     </div>
   </body>
   <script>
@@ -224,6 +248,15 @@
     }
 
     $('body').ready(function(){
+      $('#current-video').on("change", function(){
+        var sel = $('#current-video').val();
+        if(sel=='') return false;
+        console.log(window.location.href.split('?')[0])
+        var url = window.location.href.split('?')[0];
+        location = url + '?video=' + sel;
+      });
+
+      if($("video").length < 1) return;
       // This is for entering annotations
       var serverAddress = "http://ec2-18-221-127-156.us-east-2.compute.amazonaws.com:3000";
       var tagsAddress = "https://onomy.org/published/83/json";
