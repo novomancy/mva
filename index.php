@@ -1,27 +1,43 @@
 <?php
   /**
-   * This page is protected by Dartmouth's CAS auth system (uses Apache mod_auth_cas)
-   * This section grabs user info from CAS and LDAP to automatically register the
+   * This page is protected by either Dartmouth's CAS auth system (uses Apache mod_auth_cas)
+   * or basic http auth.
+   * This section grabs user info from CAS/LDAP or ./.userlist to automatically register the
    * user's name and email for annotation provenance. These accounts are not registered
    * on the annotation server, they are only used for attribution.
    */
-  require_once('classes/DNDUser.class.php');
 
-  //Get data from LDAP
+  $auth_type = 'Basic';
+
   $error = '';
-  try{
-    //CAS returns full.name@DARTMOUTH.EDU as a server var
-    $name_only = preg_split("/@/", $_SERVER['REMOTE_USER']);
-    $name_only = $name_only[0];
-    $user = new DNDUser($name_only);
-    $user->do_lookup();
-  } catch (Exception $e){
-    $error = $e;
-  }
-  
-  //Add constructed attributes and humanize LDAP names
-  if($error == ''){
-    $user->humanize();
+
+  if($auth_type=='CAS'){
+    require_once('classes/DNDUser.class.php');
+
+    //Get data from LDAP
+    try{
+      //CAS returns full.name@DARTMOUTH.EDU as a server var
+      $name_only = preg_split("/@/", $_SERVER['REMOTE_USER']);
+      $name_only = $name_only[0];
+      $user = new DNDUser($name_only);
+      $user->do_lookup();
+    } catch (Exception $e){
+      $error = $e;
+    }
+    
+    //Add constructed attributes and humanize LDAP names
+    if($error == ''){
+      $user->humanize();
+    }
+  } else if ($auth_type == "Basic") {
+    require_once('classes/ApacheUser.class.php');
+
+    try{
+      //ApacheUser handles all the interaction with htpasswd and the user list
+      $user = new ApacheUser();
+    } catch (Exception $e){
+      $error = $e;
+    }
   }
 
   /**
@@ -44,6 +60,10 @@
     closedir($video_dir);
     sort($videos);
   }
+
+  $logout_url = 'http://username@mediaecology.dartmouth.edu/shanghai_annotator/index.php';
+  // $logout_url = 'https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php';
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -83,7 +103,7 @@
       <header>
         <div id="title">Minimum Viable Annotator</div>
         <div id="login-box" style="text-align: right">
-          Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php">Log Out</a><br>
+          Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="<?php echo $logout_url; ?>">Log Out</a><br>
           Current video: <select id="current-video">
           <option value="">Select Video</option>
           <?php foreach($videos as $video){ echo "<option value='$video'".($_GET['video']==$video ? ' selected' : '').">$video</option>\n"; } ?>
