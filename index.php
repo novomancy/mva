@@ -106,7 +106,7 @@
           Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="<?php echo $logout_url; ?>">Log Out</a><br>
           Current video: <select id="current-video">
           <option value="">Select Video</option>
-          <?php foreach($videos as $video){ echo "<option value='$video'".($_GET['video']==$video ? ' selected' : '').">$video</option>\n"; } ?>
+          <?php foreach($videos as $video){ echo "<option value='$video'".(isset($_GET['video']) && $_GET['video']==$video ? ' selected' : '').">$video</option>\n"; } ?>
           </select>
         </div>
       </header>
