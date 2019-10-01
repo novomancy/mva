@@ -2,7 +2,7 @@
 #CASAuthNHeader true
 #require valid-user 
 
-AuthType Basic
-AuthName "Media Ecology Project Login"
-AuthUserFile /var/www/vhosts/mediaecology/shanghai_annotator/.htpasswd
-Require valid-user
+#AuthType Basic
+#AuthName "Media Ecology Project Login"
+#AuthUserFile /var/www/vhosts/mediaecology/shanghai_annotator/.htpasswd
+#Require valid-user
