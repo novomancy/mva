@@ -7,11 +7,22 @@
    * on the annotation server, they are only used for attribution.
    */
 
+  //conf
+  //$auth_type can be 'Basic' or 'CAS'
+  //'Basic' is apache auth
+  //'CAS' is CAS (specific to Dartmouth)
   $auth_type = 'Basic';
+
+  //$load_type can be 'Directory' or 'File'
+  //If 'Directory', it scans the current directory for .mp4 files and builds a list for the dropdown
+  //If 'File', it parses video_list.csv to produce the dropdown of available films
+  $load_type = 'File';
+
+  $selected_video = isset($_GET['video']) && $_GET['video']!='' ? urldecode($_GET['video']) : false;
 
   $error = '';
 
-  if($auth_type=='CAS'){
+  if($auth_type==='CAS'){
     require_once('classes/DNDUser.class.php');
 
     //Get data from LDAP
@@ -29,7 +40,7 @@
     if($error == ''){
       $user->humanize();
     }
-  } else if ($auth_type == "Basic") {
+  } else if ($auth_type === "Basic") {
     require_once('classes/ApacheUser.class.php');
 
     try{
@@ -40,28 +51,45 @@
     }
   }
 
-  /**
-   * This page will load a list of videos from the directory below for the 
-   * user to annotate.
-   */
-
-  $video_base_dir = '/var/www/vhosts/mediaecology/collections/shanghai';
-  $video_base_url = '//mediaecology.dartmouth.edu/collections/shanghai/';
-
   $videos = Array();
 
-  if ($video_dir = opendir($video_base_dir)) {
-    while (false !== ($fn = readdir($video_dir))) {
-        if (substr($fn, -4, 4)=='.mp4') {
-            $file = explode('/', $fn);
-            array_push($videos, array_pop($file));
-        }
-    }
-    closedir($video_dir);
-    sort($videos);
-  }
+  if($load_type==='Directory'){
+    /**
+     * This page will load a list of videos from the directory below for the 
+     * user to annotate.
+     */
 
-  $logout_url = 'http://username@mediaecology.dartmouth.edu/shanghai_annotator/index.php';
+    $video_base_dir = '/var/www/vhosts/mediaecology/collections/shanghai';
+    $video_base_url = '//mediaecology.dartmouth.edu/collections/shanghai/';
+
+    if ($video_dir = opendir($video_base_dir)) {
+      while (false !== ($fn = readdir($video_dir))) {
+          if (substr($fn, -4, 4)=='.mp4') {
+              $file = explode('/', $fn);
+              $name = array_pop($file);
+              $videos[substr($name, -4, 4)] = $video_base_url . $name; 
+          }
+      }
+      closedir($video_dir);
+    }
+  } else if($load_type==='File'){
+    /**
+     * This page will load a list of videos from video_list.csv. It should have two columns: title, url
+     */
+    $file_handle = fopen('./video_list.csv', 'r');
+
+    //remove header row
+    fgetcsv($file_handle);
+
+    while($data_row = fgetcsv($file_handle)){
+      $videos[$data_row[0]] = $data_row[1];
+    }
+
+    fclose($file_handle);
+  }
+  ksort($videos, SORT_NATURAL);
+
+  $logout_url = 'http://username@mediaecology.dartmouth.edu/acrh/index.php';
   // $logout_url = 'https://login.dartmouth.edu/logout.php?app=MEP&url=http://mediaecology.dartmouth.edu/shanghai_annotator/index.php';
 
 ?>
@@ -106,7 +134,7 @@
           Annotating as <?php echo $user->get_attribute('name'); ?> (<?php echo $user->get_attribute('email'); ?>) <a href="<?php echo $logout_url; ?>">Log Out</a><br>
           Current video: <select id="current-video">
           <option value="">Select Video</option>
-          <?php foreach($videos as $video){ echo "<option value='$video'".(isset($_GET['video']) && $_GET['video']==$video ? ' selected' : '').">$video</option>\n"; } ?>
+          <?php foreach($videos as $name => $url ){ echo "<option value='".urlencode($url)."'".($selected_video === $url ? ' selected' : '').">$name</option>\n"; } ?>
           </select>
         </div>
       </header>
@@ -119,11 +147,11 @@
         </p>
       </section>      
       <?php } ?>
-      <?php if( isset($_GET['video']) && $_GET['video'] != ''){ ?>
+      <?php if( $selected_video ){ ?>
       <section>
         <div id="page-video">
-          <video id="monks-video" width="640" height="480" controls>
-          <source src="<?php echo $video_base_url . $_GET['video']?>" type="video/mp4">
+          <video id="annotating-video" width="640" height="480" controls>
+          <source src="<?php echo $selected_video; ?>" type="video/mp4">
           Your browser does not support the video tag.
           </video>
           <br />
